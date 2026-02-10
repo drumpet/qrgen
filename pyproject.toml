@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qrgen"
+version = "0.1.0"
+description = "CLI tool that renders full-terminal responsive ASCII QR codes"
+requires-python = ">=3.10"
+dependencies = [
+    "qrcode>=7.4",
+    "blessed>=1.20.0",
+]
+
+[project.scripts]
+qrgen = "qrgen.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
